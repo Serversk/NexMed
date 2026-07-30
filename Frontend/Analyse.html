@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexMed - Medical Image Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+   <header>
+        <div class="logo">NEXMed</div>
+        <nav>
+            <a href="Home.html">Home</a>
+
+            <a href="Analyse.html" class="active">Analyse</a>
+            
+            <a href="About.html" >About</a>
+            
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="info-section">
+                <h1>AI-Powered Medical Image Analysis</h1>
+                <p>Upload an X-ray, MRI, or CT scan to get instant, AI-driven insights. Our advanced model helps identify anomalies with precision and speed.</p>
+            </div>
+            <div class="image-section">
+                <div id="image-uploader" onclick="document.getElementById('file-input').click()">
+                    <div class="upload-content">
+                        <i class="fa-solid fa-cloud-arrow-up icon"></i>
+                        <p>Drag & Drop or Click to Upload</p>
+                        <span>Supports: JPG, PNG, DICOM</span>
+                    </div>
+                    <img id="image-preview" src="#" alt="Image Preview"/>
+                </div>
+                <input type="file" id="file-input" accept="image/*,.dcm">
+            </div>
+
+            <div class="chat-section" id="chat-window">
+                <div class="chat-header">
+                    <span>AI Assistant</span>
+                </div>
+                <div class="chat-body" id="chat-body">
+                    <div class="chat-message ai">
+                        Hello! How can I assist you with your medical image analysis today?
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                    <button id="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
